@@ -1,17 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
-
-    <div class="row" style="padding-bottom: 10px;">
+<div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Features</h2>
+                <h2>Add New label</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary fa fa-arrow-left" href="{{ route('features.index') }}"> Back</a>
+                <a class="btn btn-primary fa fa-arrow-left" href="{{ route('labels.index') }}"> Back</a>
             </div>
         </div>
     </div>
+
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -24,23 +24,17 @@
         </div>
     @endif
 
-
     <div class="box box-info" style="padding-top: 10px;">
-    <div class="box-header with-border">
-
-     </div>
-<<<<<<< HEAD
-    <form class="form-horizontal" action="{{route('features.store')}}" method="post">
-=======
-    <form class="form-horizontal" action="{{route('categories.store')}}" method="post">
->>>>>>> b5ddf266ccdbba274069c9742e23d724491d88f6
+  
+    <form class="form-horizontal" action="{{route('labels.store')}}" method="post" enctype="multipart/form-data">
         @csrf
 
-               @include('admin.categories.form')
+               @include('admin.labels.form')
                <div class="box-footer">
                <button type="submit" class="btn btn-primary">Save</button>
-        </div>
-           </form>
-           </div>
-        
+               </div>
+       </form>
+       </div>
+
+
 @endsection

@@ -9,87 +9,58 @@
     padding-top: 0px;
     padding-bottom: 20px;
     margin-top: 20px;
-     ">
-      <h3 class="panel-title">All Orders</h3>
-  </div>
+">
+<h3 class="panel-title">All Order Details</h3>
+    </div>
     
- 
+    <div class="pull-right"style="
+    padding-top: 0px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+">
+<!-- <i class="fa fa-angellist"></i> -->
+    </div>
   </div>
   <div class="panel-body">
+  <!-- 'title_en', 'title_ar',
+    'img', 'link','status', -->
 
-   <!-- table -->
-   <table class="table table-striped  table-bordered table-hover dataTable ">
+   <!-- table'name_en', 'name_ar', -->
+   <table class="table table-striped table-bordered table-hover dataTable">
     <thead>
-    <tr> 
-      <th>#</th>    
-    <th>User name</th>
-    <!-- <'invoiceID', 'user_id','product_id','amount','price',
-    'shipping', 'paymentMethod','archive','checkoutId',
-    'shippingMethod', 'coupon','shipping_status',
- -->
-    <th>Invoice ID</th>
+    <tr>     
+    <th>#</th>
+    <th>invoiceID</th>
     <th>User Name</th>
+    <th>Quantity</th>
     <th>Price</th>
-    <th>Amount</th>
-    <th>Payment Method</th>
-    <th>status</th>
-    <th>Archive</th>
+    <th>Statue</th>
     <th>Action</th>
     </tr>
     </thead>
     <tbody>
-   @foreach($orders as $order)
+<!-- `name_en`, `name_ar`, `category_id`, `img`, `order`, `status` -->
+   @foreach($order as $orderDetail)
    <tr>
-     <td>{!!$x++!!}</td>
-  <td>{!!$order->code!!} </td>
-  <td>{!!$order->name_en!!}</td>
-  <!-- <td>{!!$order->name_ar!!}</td> -->
-  <!-- <td>{!!$order->description_en!!}</td>
-  <td>{!!$order->description_ar!!}</td>
-  <td>{!!$order->price_before!!}</td> -->
-  <td>{!!$order->price_after!!}</td>
-  <!-- <td>{!!$order->otherData!!}</td> -->
-  <td><img width="70px"  height="70px" class="img-circle" src="{!!asset('upload/order/'.$order->img_main)!!}"></td>
-  @if($order->isOffer==1)
-    <td>Yes</td>
-  @else
-     <td>No </td>
-  @endif
-  @if($order->status==1)
-    <td>Active</td>
-  @else
-     <td>inactive </td>
-  @endif
-  <td>{!!$order->category->name_en!!}</td>
-  <!-- <td>{!!$order->cost!!}</td> -->
-  <td>{!!$order->quantity!!}</td>
-  <td>{!!$order->order!!}</td>
-  @if($order->free_shipping==1)
-    <td>Yes</td>
-  @else
-     <td>No </td>
-  @endif
-  @if(!empty($order->supplier->name))
-  <td>{!!$order->supplier->name!!}</td>
+  <td>{{$x++}} </td>
+  <td>{{$orderDetail->invoiceID}}</td>
+  <td>{{$orderDetail->user->firstName." ".$orderDetail->user->lastName}}</td>
+  <td>{{$orderDetail->quantity}}</td>
+  <td>{{$orderDetail->total_price}}</td>
+  <td>{{$orderDetail->statue}}</td>
+  
 
-  @else
-  <td></td>
-  @endif
+
   <td> 
-  <form class="delete" action="{{ route('orders.destroy',$order->id) }}" method="POST">
-  <!-- <a class="btn btn-info" href="{!! route('orders.show',$order->id) !!}">Show</a> -->
-  <a class="fa fa-edit "  style="font-size:16px" href="{{ route('orders.edit',$order->id) }}"></a>
-   <input type="hidden" name="_method" value="DELETE">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <button type="submit " class="fa fa-close"  style="font-size:14px;color:red " value="Delete"> </button>
-        </form>
+  
+  <a class="fa fa-tv "  style="font-size:16px"  href="{{ route('orders.show',$orderDetail->id) }}"></a>
+  
         </td>
    </tr>
    @endforeach
   </tbody>
   </table>
-
- {{$orders->render()}}
+ {{$order->render()}}
 
   </div>
 </div>

@@ -175,7 +175,7 @@ class ProductController extends Controller
             'otherData' => $request->input('otherData'),
             'quantity' =>$request->input('quantity') ,            
             // 'img_main' => $request->input('img_main'),
-            'slug' =>$request->input('slug') ,
+            'slug' =>str_slug($request->input('slug')) ,
             'order' =>$request->input('order') ,
             'status' => $request->input('status'),
             'category_id' => $request->input('category_id'),

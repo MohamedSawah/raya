@@ -1,7 +1,6 @@
 <div class="col-lg-12 col-md-12">
 
-<div class="row">
-<!-- `name_en`, `name_ar` -->
+                       <div class="row">
                         <div class="form-group col-md-6">
                         <label for="name" class=" col-form-label text-md-right">{{ __('English name') }}</label>
 
@@ -14,9 +13,6 @@
                             <input id="name_ar" type="text" class="form-control" name="name_ar"   autofocus>
 
                         </div>
-                        <!-- //   'code', 'name_en', 'name_ar', 'info_en', 'info_ar', 'description_en', 
-        //  'description_ar', 'price','price_after', 'otherData', 'quantity', 
-        //  'img_main', 'slug', 'order', 'status', 'category_id', -->
                         </div>
                         <div class="row">
                          <div class="form-group col-md-6">
@@ -50,9 +46,6 @@
                         <label for="name" class=" col-form-label text-md-right">{{ __('Code') }}</label>
 
                             <input id="code" min="0" type="number" class="form-control" name="code"   autofocus>
-
-                            <input id="code" min="0" type="number" class="form-control" name="code"   autofocus>
-
 
                         </div>
                         <div class="form-group col-md-6">
@@ -141,8 +134,6 @@
                        <div class="row">
                           <div class="form-group col-md-6">
                             <label for="img_main" class="col-form-label text-md-right">Upload Main image </label>
-
-                            <input id="img_main" type="file" accept="image/png, image/jpeg, image/gif" name="img_main"  autofocus/>
 
                             <input id="img_main" type="file" accept="image/png, image/jpeg, image/gif" name="img_main"  autofocus/>
 

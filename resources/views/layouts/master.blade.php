@@ -62,6 +62,7 @@ body {
 
     border-bottom: 1px solid rgba(69, 74, 84, 0.7);
 } */
+  
   </style>
  </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -163,6 +164,8 @@ body {
         
         <li ><a href="{{url('admin/currencies')}}"><i class="fa fa-usd"></i> <span>Currencies</span></a></li>
         <li><a href="{{url('admin/countries')}}"><i class="fa fa-codiepie"></i> <span>Countries</span></a></li>
+        <li><a href="{{url('admin/services')}}"><i class="fa fa-codiepie"></i> <span>Services</span></a></li>
+        <li><a href="{{url('admin/pages')}}"><i class="fa fa-codiepie"></i> <span>Pages</span></a></li>
         <li class=" treeview" >
         <a href="#">
             <i class="fa fa-list-alt"></i><span>Products</span>
@@ -178,15 +181,18 @@ body {
           <li><a href="{{url('admin/featureproduct')}}"><i class="fa fa-angellist"></i> <span> feature product</span></a></li>
 
           <li><a href="{{url('admin/labels')}}"><i class="fa fa-get-pocket"></i> <span>Labels</span></a></li>
+          <li><a href="{{url('admin/featureproduct')}}"><i class="fa fa-angellist"></i> <span>Product Feature</span></a></li>
+          <li><a href="{{url('admin/orders')}}"><i class="fa fa-get-pocket"></i> <span>Order</span></a></li>
 
           </ul>
         
         </li>
-        <li><a href="{{url('admin/users')}}"><i class="fa fa-user-circle"></i> <span>User</span></a></li> 
         <li><a href="{{url('admin/branches')}}"><i class="fa fa-user-circle"></i> <span>Branches</span></a></li>                 
         <li><a href="{{url('admin/suppliers')}}"><i class="fa fa-user-circle"></i> <span>Supplier</span></a></li>        
-        <li><a href="{{url('admin/offers')}}"><i class="fa fa-bullhorn"></i> <span>Offers</span></a></li>
         <li><a href="{{url('admin/orders')}}"><i class="fa fa-cart-plus"></i> <span>Orders</span></a></li>
+        <li><a href="{{url('admin/users')}}"><i class="fa fa-user-circle"></i> <span>User</span></a></li>                
+        <!-- <li><a href="{{url('admin/offers')}}"><i class="fa fa-bullhorn"></i> <span>Offers</span></a></li> -->
+        <!-- <li><a href="{{url('admin/orders')}}"><i class="fa fa-cart-plus"></i> <span>Orders</span></a></li> -->
         <li><a href="{{url('admin/coupons')}}"><i class=" fa fa-vcard"></i> <span>Coupon</span></a></li>  
         <li class=" treeview" >
         <a href="#">
@@ -197,6 +203,8 @@ body {
           </a>
           <ul class="treeview-menu" style="display: none;">
           <li><a href="{{url('admin/slideshows')}}"><i class="fa fa-slideshare"></i> <span>Slideshow</span></a></li>
+        <li><a href="{{url('admin/settings')}}"><i class="fa fa-codiepie"></i> <span>Settings</span></a></li>
+          
           </ul>
         
         </li>

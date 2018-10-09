@@ -194,8 +194,9 @@
 <div class="form-group col-md-6">
                             <label for="status" class=" col-form-label text-md-right">{{ __('status') }}</label>
                             <select name="status" class="form-control">
-                              <option value="1" >Active</option>    
-                              <option value="0" >Inactive</option>    
+                              <option value="2" >Editer</option>                                
+                              <option value="1" >Admin</option>    
+                              <option value="0" >User</option>    
                             </select>
                           </div>
 

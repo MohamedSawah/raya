@@ -10,9 +10,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import "~admin-lte/dist/css/AdminLTE.css";
+@import "~admin-lte/dist/css/adminlte.css.map";
+@import "~admin-lte/bower_components/bootstrap/dist/css/bootstrap.css";
 @import "~admin-lte/dist/css/skins/_all-skins.css";
 //@import "~admin-lte/dist/dist/img/";
-// @import "~public/fonts/font-awesome.scss";dist/img/
+// @import "~public/fonts/font-awesome.scss";
 // @import "node_modules/font-awesome/scss/font-awesome";
  $fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
  @import "node_modules/font-awesome/css/font-awesome";

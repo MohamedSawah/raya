@@ -35,12 +35,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'is.admin'], function () {
  Route::get('/admin', 'admin\AdminController@index');
+ Route::get('admin/opinions', 'admin\OpinionController@index');
  //users
  Route::resource('admin/users','admin\UserController');
   //currencies
   Route::resource('admin/currencies','admin\CurrencyController');
-  //offiers
-  Route::resource('admin/offers','admin\OfferController');
   //slideshow
   Route::resource('admin/slideshow','admin\SlideShowController');
   //Country
@@ -71,7 +70,7 @@ Route::group(['middleware' => 'is.admin'], function () {
  Route::resource('image','ImageController');
 });
    //Order
-   Route::resource('admin/orders','admin\OrderController'); 
+//    Route::resource('admin/orders','admin\OrderController'); 
    //about
    Route::get('about','PageController@about')->name('about');
    //contact

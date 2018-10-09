@@ -49,9 +49,11 @@
 <td style="display:none;">{{$user->address2}}</td>
 <td style="display:none;">{{$user->city2}}</td>
 @if($user->status==1)
-    <td>Active</td>
+    <td>Admin</td>
+  @elseif($user->status==2)
+    <td>Editor</td>
   @else
-     <td>inactive </td>
+     <td>User </td>
   @endif
 
 <td>{{$user->country->name_en}}</td>
