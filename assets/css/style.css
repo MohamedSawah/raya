@@ -643,6 +643,19 @@ a.top-cart {
     margin: 0;
     padding: 5px 10px;
 }
+
+.special-offer .member .img{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+.special-offer .member .img img{
+    border-radius:50%
+}
+.special-offer .member h4{text-align:center;margin-top:20px}
+.special-offer .member p{text-align:center}
+
 /* shop area */
 
 .shop-img img {
@@ -851,6 +864,8 @@ a.top-cart {
 .shop-menu button.active::before {
     transform: scaleX(1);
 }
+
+
 /* subscribe area */
 .shop-text {
     background: url(../img/bg/11.jpg);
